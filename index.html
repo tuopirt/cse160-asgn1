@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Draw on Canvas</title>
+    </head>
+
+    <body onload="main()">
+        <p>
+            Added additional feature like converting hex code color to be able to be used as a color, for example #8304f3 (purple) or any color from pages like: https://htmlcolorcodes.com 
+        </p>
+        <canvas id="example" width="400" height="400">
+            Please use a browser that supports "canvas".
+        </canvas>
+        <img src="image.jpg" alt="Example Image" width="540" height="405"/>
+
+        <br>
+        <button type="button" id="clearB">Clear Canvas</button>
+        <button type="button" id="drew">Draw Painting</button>
+
+        <p>Color Presets:
+        <br>
+        <button type="button" id="green">Green</button>
+        <button type="button" id="red">Red</button>
+        </p>
+
+        <p>Pens:
+        <br>
+        <button type="button" id="square">Square</button>
+        <button type="button" id="tri">Triangle</button>
+        <button type="button" id="cir">Circle</button>
+        </p>    
+
+        <p>Adjust Color:
+        <br>
+        Red <input type="range" min="0" max="100" value="100" class="slider" id="redSlide">
+        Green <input type="range" min="0" max="100" value="0" class="slider" id="greenSlide">
+        Blue <input type="range" min="0" max="100" value="0" class="slider" id="blueSlide">
+        </p> 
+        <p>Enter HTML Hex Code:
+        <br>
+        <input type="text" id="hexInput" placeholder="#FFFFFF">
+        <button type="button" id="applyColor">Apply Color</button>
+        </p>
+
+        <p>Aditional Slider:
+        <br>
+        Size <input type="range" min="5" max="40" value="0" class="slider" id="sizeSlide">
+        Segments <input type="range" min="9" max="30" value="0" class="slider" id="segSlide">
+        </p> 
+
+        <script src="../lib/webgl-utils.js"></script>
+        <script src="../lib/webgl-debug.js"></script>
+        <script src="../lib/cuon-utils.js"></script>
+        <script src="Points.js"></script>
+        <script src="Triangle.js"></script>
+        <script src="Circle.js"></script>
+        <script src="Draw.js"></script>
+        <script src="ColoredPoints.js"></script>
+    </body>
+</html>
